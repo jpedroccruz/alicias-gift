@@ -1,0 +1,167 @@
+/* login */
+
+:root {
+  --bg-color: #E9D7FF;
+  --button-color: #5D2E9E;
+  --primary-color: #C4A1FF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #E9D7FF;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+header, footer {
+  min-height: 6.4rem;
+  background-color: var(--primary-color);
+}
+
+main {
+  margin: auto;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.6rem;
+  background-color: var(--primary-color);
+  padding: 2rem;
+  border-radius: 1.6rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  gap: 1.6rem;
+}
+
+.login {
+  font-size: 3.2rem;
+}
+
+.line {
+  height: .2rem;
+  background-color: #000000;
+  width: 100%;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+label {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+input {
+  border-radius: .8rem;
+  font-size: 2rem;
+  padding: .8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1.6rem;
+  color: #ff0000;
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.submit {
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  background-color: var(--button-color);
+  padding: 0.8rem;
+  border-radius: .8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+
+.submit:hover {
+  background-color: #5d2e9e81;
+}
+
+.error {
+  outline: 2px solid #ff0000;
+}
+
+/* index.html */
+
+.photo_container {
+  background-color: #FFFFFF;
+  width: 95%;
+  height: 32rem;
+  padding: 1.2rem 1.2rem 3.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.photo {
+  width: 100%;
+  height: 28rem;
+  object-fit: cover;
+}
+
+.description {
+  font-size: 1.6rem;
+  font-weight: 700;
+  word-wrap: break-word;
+  align-self: flex-start;
+  text-align: justify;
+}
+
+.camera_container {
+  border: .2rem solid #000000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  padding: 1.6rem;
+  cursor: pointer;
+}
+
+.camera {
+  width: 6rem;
+}
+
+.flash {
+  position: fixed;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  animation: flash 0.3s ease-out forwards;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
