@@ -47,7 +47,7 @@ const phrases = [
 let index = 0
 
 document.addEventListener('DOMContentLoaded', () => {
-  if(!isTokenValid()) {
+  if (!isTokenValid()) {
     window.location.href = "login.html"
   }
 })

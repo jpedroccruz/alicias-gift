@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if(isTokenValid()) {
     window.location.href = "index.html"
   }
+
+  const token = new URLSearchParams(window.location.search).get('token')
+
+  if (!token || token !== "UBFLx95MiZ8BSvBduoqvgXE5uhUb9YmI4vAoWkoRGpiUihszeM7610VEOkpYkkRx") {
+    document.body.innerHTML = "<h1 style='text-align: center; margin-top: 20%;'>Acesso Negado</h1>"
+  }
 })
 
 form.addEventListener('submit', (event) => {
