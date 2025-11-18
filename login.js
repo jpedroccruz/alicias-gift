@@ -95,7 +95,7 @@ function checkWhatAmI() {
 function checkRafaelsSurname() {
   if (String(rafaels_surname.value).trim() === "") {
     addError(rafaels_surname, "O apelido dele é obrigatório")
-  } else if (String(rafaels_surname.value).toLowerCase() !== "cavalo") {
+  } else if (String(rafaels_surname.value).toLowerCase() !== "cabeção") {
     addError(rafaels_surname, "Como que me erra essa 🤨")
   } else {
     const errorMensage = rafaels_surname.parentElement.querySelector('p')
